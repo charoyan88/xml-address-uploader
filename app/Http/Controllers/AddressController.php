@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Validator;
 class AddressController extends Controller
 {
 
+    /**
+     * @param Request $request
+     * @param AddressService $addressService
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function findAddress(Request $request, AddressService $addressService)
     {
         $validator = Validator::make($request->all(), [
@@ -44,6 +49,11 @@ class AddressController extends Controller
         }
     }
 
+    /**
+     * @param Request $request
+     * @param AddressService $addressService
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function findAddressesGroups(Request $request,AddressService $addressService)
     {
         try {

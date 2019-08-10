@@ -8,16 +8,21 @@ use Illuminate\Support\Facades\DB;
 
 class AddressService extends BaseService
 {
+    /**
+     * @param $data
+     */
     public function createAddress($data)
     {
         Address::firstOrCreate($data);
     }
 
+    /**
+     * @param $data
+     * @return \Illuminate\Support\Collection
+     */
     public function findAddresses($data)
     {
         $address = $data["address"];
-        $lat = $data["lat"];
-        $lng = $data["lng"];
         $address_number = filter_var($address, FILTER_SANITIZE_NUMBER_INT);
         $address_name = preg_replace('/\PL/u', '', $address);
         $search_result = Address::where('addresses_address', 'like', $address_number . '%')
@@ -28,6 +33,11 @@ class AddressService extends BaseService
         return $search_result;
     }
 
+    /**
+     * @param $data
+     * @param int $distance_radius
+     * @return mixed
+     */
     public function findAddressesGroups($data, $distance_radius = 6371)
     {
         $lat = $data['lat'];

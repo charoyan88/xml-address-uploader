@@ -9757,7 +9757,7 @@ module.exports = function (js, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(32);
-module.exports = __webpack_require__(97);
+module.exports = __webpack_require__(98);
 
 
 /***/ }),
@@ -9774,7 +9774,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Index__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Index__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__router__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_browser_geolocation__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_browser_geolocation__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_browser_geolocation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vue_browser_geolocation__);
 __webpack_require__(33);
 
@@ -55390,178 +55390,175 @@ var render = function() {
                 },
                 [_vm._v("Find")]
               )
-        ]),
-        _vm._v(" "),
-        _vm.addresses.length > 0
-          ? _c(
-              "div",
-              {
-                staticClass:
-                  "row h-75 justify-content-center align-items-center"
-              },
-              _vm._l(_vm.addresses, function(address) {
-                return _c("div", { staticClass: "col-md-8" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "alert alert-light",
-                      attrs: {
-                        role: "alert",
-                        data_addresses_cord_x: address.addresses_cord_x,
-                        data_addresses_cord_y: address.addresses_cord_y
-                      },
-                      on: { click: _vm.selectAddress }
-                    },
-                    [
-                      _vm._v(
-                        "\n                    " +
-                          _vm._s(address.addresses_street_name) +
-                          " " +
-                          _vm._s(address.addresses_address) +
-                          "\n                "
-                      )
-                    ]
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _vm.addresses.length > 0
+      ? _c(
+          "div",
+          { staticClass: "row h-75 justify-content-center align-items-center" },
+          _vm._l(_vm.addresses, function(address) {
+            return _c("div", { staticClass: "col-md-8" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "alert alert-light",
+                  attrs: {
+                    role: "alert",
+                    data_addresses_cord_x: address.addresses_cord_x,
+                    data_addresses_cord_y: address.addresses_cord_y
+                  },
+                  on: { click: _vm.selectAddress }
+                },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(address.addresses_street_name) +
+                      " " +
+                      _vm._s(address.addresses_address) +
+                      "\n                "
                   )
-                ])
-              }),
-              0
-            )
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.groupedAddresses.length > 0
-          ? _c("div", { staticClass: "row " }, [
-              _c(
-                "div",
-                { staticClass: "col-md-4" },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "alert alert-success",
-                      attrs: { role: "alert" }
-                    },
-                    [
-                      _vm._v(
-                        "\n                    Distance < 5 Km\n                "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.groupedAddresses, function(address) {
-                    return address.distance < 5
-                      ? _c(
-                          "div",
-                          {
-                            staticClass: "alert alert-light",
-                            attrs: { role: "alert" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                    " +
-                                _vm._s(address.addresses_street_name) +
-                                " " +
-                                _vm._s(address.addresses_address) +
-                                " (" +
-                                _vm._s(address.distance.toFixed(1)) +
-                                ")\n                "
-                            )
-                          ]
-                        )
-                      : _vm._e()
-                  })
-                ],
-                2
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "col-md-4" },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "alert alert-success",
-                      attrs: { role: "alert" }
-                    },
-                    [
-                      _vm._v(
-                        "\n                    Distance From 5 Km to 30 Km\n                "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.groupedAddresses, function(address) {
-                    return address.distance > 5 && address.distance < 30
-                      ? _c(
-                          "div",
-                          {
-                            staticClass: "alert alert-light",
-                            attrs: { role: "alert" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                    " +
-                                _vm._s(address.addresses_street_name) +
-                                " " +
-                                _vm._s(address.addresses_address) +
-                                " (" +
-                                _vm._s(address.distance.toFixed(1)) +
-                                ")\n                "
-                            )
-                          ]
-                        )
-                      : _vm._e()
-                  })
-                ],
-                2
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "col-md-4" },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "alert alert-success",
-                      attrs: { role: "alert" }
-                    },
-                    [
-                      _vm._v(
-                        "\n                    Distance more than 30 Km\n                "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.groupedAddresses, function(address) {
-                    return address.distance > 30
-                      ? _c(
-                          "div",
-                          {
-                            staticClass: "alert alert-light",
-                            attrs: { role: "alert" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                    " +
-                                _vm._s(address.addresses_street_name) +
-                                " " +
-                                _vm._s(address.addresses_address) +
-                                " (" +
-                                _vm._s(address.distance.toFixed(1)) +
-                                ")\n                "
-                            )
-                          ]
-                        )
-                      : _vm._e()
-                  })
-                ],
-                2
+                ]
               )
             ])
-          : _vm._e()
-      ]
-    )
+          }),
+          0
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.groupedAddresses.length > 0
+      ? _c("div", { staticClass: "row " }, [
+          _c(
+            "div",
+            { staticClass: "col-md-4" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "alert alert-success",
+                  attrs: { role: "alert" }
+                },
+                [
+                  _vm._v(
+                    "\n                    Distance < 5 Km\n                "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.groupedAddresses, function(address) {
+                return address.distance < 5
+                  ? _c(
+                      "div",
+                      {
+                        staticClass: "alert alert-light",
+                        attrs: { role: "alert" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(address.addresses_street_name) +
+                            " " +
+                            _vm._s(address.addresses_address) +
+                            " (" +
+                            _vm._s(address.distance.toFixed(1)) +
+                            ")\n                "
+                        )
+                      ]
+                    )
+                  : _vm._e()
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-md-4" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "alert alert-success",
+                  attrs: { role: "alert" }
+                },
+                [
+                  _vm._v(
+                    "\n                    Distance From 5 Km to 30 Km\n                "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.groupedAddresses, function(address) {
+                return address.distance > 5 && address.distance < 30
+                  ? _c(
+                      "div",
+                      {
+                        staticClass: "alert alert-light",
+                        attrs: { role: "alert" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(address.addresses_street_name) +
+                            " " +
+                            _vm._s(address.addresses_address) +
+                            " (" +
+                            _vm._s(address.distance.toFixed(1)) +
+                            ")\n                "
+                        )
+                      ]
+                    )
+                  : _vm._e()
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-md-4" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "alert alert-success",
+                  attrs: { role: "alert" }
+                },
+                [
+                  _vm._v(
+                    "\n                    Distance more than 30 Km\n                "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.groupedAddresses, function(address) {
+                return address.distance > 30
+                  ? _c(
+                      "div",
+                      {
+                        staticClass: "alert alert-light",
+                        attrs: { role: "alert" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(address.addresses_street_name) +
+                            " " +
+                            _vm._s(address.addresses_address) +
+                            " (" +
+                            _vm._s(address.distance.toFixed(1)) +
+                            ")\n                "
+                        )
+                      ]
+                    )
+                  : _vm._e()
+              })
+            ],
+            2
+          )
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
@@ -58207,18 +58204,15 @@ if (false) {
 
 /***/ }),
 /* 97 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 !function(o,t){ true?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.VueGeolocation=t():o.VueGeolocation=t()}(this,function(){return function(o){function t(n){if(e[n])return e[n].exports;var r=e[n]={i:n,l:!1,exports:{}};return o[n].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var e={};return t.m=o,t.c=e,t.i=function(o){return o},t.d=function(o,e,n){t.o(o,e)||Object.defineProperty(o,e,{configurable:!1,enumerable:!0,get:n})},t.n=function(o){var e=o&&o.__esModule?function(){return o.default}:function(){return o};return t.d(e,"a",e),e},t.o=function(o,t){return Object.prototype.hasOwnProperty.call(o,t)},t.p="",t(t.s=0)}([function(o,t,e){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n={install:function(o){o.prototype.$getLocation=n.getLocation,o.prototype.$watchLocation=n.watchLocation,o.prototype.$clearLocationWatch=n.clearLocation},getLocation:function(){var o=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return new Promise(function(e,r){if(t)return void r("reject forced for testing purposes");n._isAvailable()?window.navigator.geolocation.getCurrentPosition(function(o){e({lat:o.coords.latitude,lng:o.coords.longitude,altitude:o.coords.altitude,altitudeAccuracy:o.coords.altitudeAccuracy,accuracy:o.coords.accuracy})},function(){r("no position access")},o):r("no browser support")})},watchLocation:function(){var o=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return new Promise(function(e,r){if(t)return void r("reject forced for testing purposes");n._isAvailable()?window.navigator.geolocation.watchPosition(function(o){e({lat:o.coords.latitude,lng:o.coords.longitude,altitude:o.coords.altitude,altitudeAccuracy:o.coords.altitudeAccuracy,accuracy:o.coords.accuracy,heading:o.coords.heading,speed:o.coords.speed})},function(){r("no position access")},o):r("no browser support")})},clearLocation:function(o){return new Promise(function(t,e){n._isAvailable()?o?t(window.navigator.geolocation.clearWatch(o)):e("please provide watchID"):e("no browser support")})},_isAvailable:function(){return"geolocation"in window.navigator}};t.default=n,"undefined"!=typeof window&&window.Vue&&window.Vue.use(n)}])});
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

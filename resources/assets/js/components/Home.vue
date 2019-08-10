@@ -15,6 +15,7 @@
                 </button>
                 <button v-else="" class="btn btn-primary btn-block mt-3" @click="find">Find</button>
             </div>
+        </div>
             <div v-if="addresses.length>0" class="row h-75 justify-content-center align-items-center">
                 <div v-for="address in addresses" class="col-md-8">
                     <div @click="selectAddress" class="alert alert-light" role="alert"
@@ -54,7 +55,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 <script>
     export default {

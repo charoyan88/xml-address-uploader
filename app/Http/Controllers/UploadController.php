@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Validator;
 
 class UploadController extends Controller
 {
+    /**
+     * @param Request $request
+     * @param AddressService $addressService
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function uploadXml(Request $request, AddressService $addressService)
     {
         $data = $request->xml;
