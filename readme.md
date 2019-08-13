@@ -2,9 +2,8 @@
 This is a tool to import a list addresses  from  XML file into a database and search for addresses by keywords and distance from the database.
 The project was written by Laravel Framework 5.4  and Vue js
 ## XML Example
-<?xml version="1.0" encoding="utf-8" ?>
+```xml
 <roomservice>
-  <!-- Table addresses -->
     <addresses>
         <addresses_id>137571</addresses_id>
         <addresses_address>17С2</addresses_address>
@@ -18,3 +17,4 @@ The project was written by Laravel Framework 5.4  and Vue js
         <addresses_cord_x>55.76635</addresses_cord_x>
     </addresses>
   </roomservice>
+```
